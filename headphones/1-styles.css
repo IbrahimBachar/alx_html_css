@@ -1,0 +1,27 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    /* font-family: Arial, sans-serif; */
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+}
+
+.text-container{
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+.text-container p{
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: regular;
+}
+
+.image-container{
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    gap: 50px;
+}

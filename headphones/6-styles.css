@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.results-section {
+    background-color: #071629;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.results-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.result-item {
+    flex: 1;
+    min-width: 200px;
+}
+
+.pentagon {
+    position: relative;
+    width: 190px;
+    height: 190px;
+    margin: 0 auto;
+    background: #FF6565;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+/* Optional: Add shine effect to make it more realistic */
+.pentagon::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.result-number {
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.result-text {
+    font-size: 14px;
+    max-width: 120px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .results-grid {
+        gap: 20px;
+    }
+    
+    .result-item {
+        min-width: 160px;
+        flex: 0 0 calc(50% - 20px);
+    }
+    
+    .pentagon {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .results-section {
+        padding: 60px 20px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .results-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .result-item {
+        flex: 1;
+        min-width: 100%;
+    }
+    
+    .pentagon {
+        width: 180px;
+        height: 180px;
+    }
+}
